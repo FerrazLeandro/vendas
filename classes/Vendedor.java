@@ -8,6 +8,6 @@ public class Vendedor extends Pessoa{
     }
 
     public void setComissao(double comissao) {
-        this.comissao = comissao;
+        this.comissao = comissao * 0.05;
     }
 }

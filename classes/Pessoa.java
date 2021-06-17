@@ -6,7 +6,6 @@ public class Pessoa {
     public double salario;
     public int tipo;
 
-
     public int getTipo() {
         return tipo;
     }
@@ -31,4 +30,5 @@ public class Pessoa {
     public void setSalario(double salario) {
         this.salario = salario - (salario * 0.11);
     }
+    
 }
