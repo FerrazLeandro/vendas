@@ -1,38 +1,31 @@
 package programa;
 
 import java.util.Scanner;
-
+import classes.Pessoa;
 public class Programa {
 
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    int opcao;
+   Scanner sc = new Scanner(System.in);
+   Pessoa pessoa = new Pessoa();
 
-    do {
-      System.out.println("Escolha uma opção:");
-      System.out.println("1 - Incluir pessoa");
-      System.out.println("2 - Listar todos os cadastrados");
-      System.out.print("Opção: ");
+   System.out.println("             :: Bem vindo ao sistema de RH ::");
+   System.out.printf("Informe o funcionário: \n 0 - Administrativo \n 1 - Vendedor \nTipo de funcionário: ");
+   pessoa.setTipo(sc.nextInt());
+   sc.nextLine();
+   System.out.print("Nome: ");
+   pessoa.setNome(sc.nextLine());
+   System.out.print("Matrícula: ");
+   pessoa.setMatricula(sc.nextLine());
+   System.out.print("Salário bruto: ");
+   pessoa.setSalario(sc.nextDouble());
 
-      opcao = sc.nextInt();
-      sc.nextLine(); // Limpa o ENTER que fica na entrada  
 
-      switch (opcao) {
-        case 0:
-          System.out.println("Fim do programa!");
-          break;
-        case 1:
 
-          break;
-        case 2:
+   System.out.printf("\n          ::  Folha de pagamento da empresa Auto Peças SA  :: \n");
+   System.out.println("Nome: " + pessoa.getNome());
+   System.out.println("Matricula: " + pessoa.getMatricula());
+   System.out.println("Salário líquido: " + pessoa.getSalario());
 
-          break;
-        default:
-          System.out.println("Opção inválida! :(");
-          break;
-      }
-    } while (opcao != 0);
-
-    sc.close();
+  sc.close();
   }
 }
